@@ -3,3 +3,4 @@
 .prettier.cjs
 .lintstagedrc.cjs
 .stylelintrc.cjs
+commitlint.config.cjs
