@@ -26,6 +26,9 @@ module.exports = {
   plugins: ['vue'],
   rules: {
     'vue/multi-word-component-names': 'off',
-    '@typescript-eslint/triple-slash-reference': 'off'
+    'space-before-function-paren': 'off',
+    '@typescript-eslint/space-before-function-paren': 'off',
+    '@typescript-eslint/triple-slash-reference': 'off',
+    '@typescript-eslint/promise-function-async': 'off'
   }
 }

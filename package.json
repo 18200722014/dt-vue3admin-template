@@ -12,11 +12,14 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "vue": "^3.3.4"
+    "pinia": "^2.1.6",
+    "vue": "^3.3.4",
+    "vue-router": "4"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.7.1",
     "@commitlint/config-conventional": "^17.7.0",
+    "@types/node": "^20.5.7",
     "@typescript-eslint/eslint-plugin": "^6.4.0",
     "@vitejs/plugin-vue": "^4.2.3",
     "eslint": "^8.0.1",
