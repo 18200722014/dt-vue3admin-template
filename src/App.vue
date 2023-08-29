@@ -1,16 +1,13 @@
 <template>
-  <div>
-
-  </div>
+  <div></div>
 </template>
 
-<script setup lang='ts'>
+<script setup lang="ts">
 defineOptions({
   name: ''
 })
-
 </script>
 
-<style lang='scss' scoped>
+<style lang="scss" scoped>
 // App.vue style
 </style>
