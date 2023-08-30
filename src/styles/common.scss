@@ -1,1 +1,8 @@
 // 全局公共样式表
+html,
+body,
+#app,
+.layout,
+.layout > .el-container {
+  height: 100%;
+}

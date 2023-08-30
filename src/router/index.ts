@@ -1,8 +1,16 @@
 import { type App } from 'vue'
 import { createRouter, createWebHistory, type RouteRecordRaw } from 'vue-router'
+/** layout布局组件 */
+import { layout } from './constant'
 
 // 路由列表
-const routes: RouteRecordRaw[] = []
+const routes: RouteRecordRaw[] = [
+  {
+    path: '/',
+    name: 'Home',
+    component: layout
+  }
+]
 
 const router = createRouter({
   /** 路由列表 */
