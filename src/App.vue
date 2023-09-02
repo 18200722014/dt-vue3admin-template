@@ -8,6 +8,4 @@ defineOptions({
 })
 </script>
 
-<style lang="scss" scoped>
-// App.vue style
-</style>
+<style lang="sass" scoped></style>

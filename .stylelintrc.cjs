@@ -2,16 +2,16 @@ module.exports = {
   // 扩展
   extends: [
     'stylelint-config-standard',
-    'stylelint-config-prettier',
-    'stylelint-config-recommended-scss',
-    'stylelint-config-standard-vue'
+    'stylelint-config-prettier-scss',
+    'stylelint-config-standard-scss',
+    'stylelint-config-standard-vue/scss'
   ],
   // 插件
-  plugins: ['stylelint-order'],
+  plugins: ['stylelint-scss', 'stylelint-order'],
   // 不同格式的文件指定自定义语法
   overrides: [
     {
-      files: ['**/*.(less|css|vue|html)'],
+      files: ['**/*.(scss|css|vue|html)'],
       customSyntax: 'postcss-scss'
     },
     {
@@ -33,7 +33,16 @@ module.exports = {
   ],
   // 规则
   rules: {
+    'no-empty-source': null, // 关闭静止style内容空
+    'block-no-empty': null, // 关闭块不能为空规则
     'no-descending-specificity': null, // 禁止在具有较高优先级的选择器后出现被其覆盖的较低优先级的选择器
+    // 选择器命名规范
+    'selector-class-pattern': [
+      '^([a-z][a-z0-9]*)((-|__)[a-z0-9]+)*$',
+      {
+        message: 'Expected class selector to be kebab-case'
+      }
+    ],
     'selector-pseudo-element-no-unknown': [
       // 禁止未知的伪元素选择器
       true,
