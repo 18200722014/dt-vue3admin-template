@@ -6,30 +6,31 @@
         <span>Navigator One</span>
       </template>
       <el-menu-item index="1-2">
-        <el-icon><icon-menu /></el-icon>
+        <el-icon><Menu /></el-icon>
         <span>Navigator Two</span>
       </el-menu-item>
-      <el-sub-menu index="1-3">
+      <!-- <el-sub-menu index="1-3">
         <template #title>
           <span>item four</span>
         </template>
         <el-menu-item index="1-3-1">
           <span>item one</span>
         </el-menu-item>
-      </el-sub-menu>
+      </el-sub-menu> -->
     </el-sub-menu>
     <el-menu-item index="3">
-      <el-icon><icon-menu /></el-icon>
+      <el-icon><Menu /></el-icon>
       <span>Navigator Two</span>
     </el-menu-item>
     <el-menu-item index="4">
-      <el-icon><setting /></el-icon>
+      <el-icon><Setting /></el-icon>
       <span>Navigator Four</span>
     </el-menu-item>
   </div>
 </template>
 
 <script setup lang="ts">
+import { Setting, Menu, Location } from '@element-plus/icons-vue'
 defineOptions({
   name: 'SideBarItem'
 })
@@ -43,9 +44,14 @@ defineOptions({
     &.is-active {
       position: relative;
 
-      span {
+      span,
+      .el-icon {
         position: absolute;
         z-index: 1;
+      }
+
+      span {
+        margin-left: 29px;
       }
 
       &::after {
@@ -69,13 +75,15 @@ defineOptions({
     }
 
     &:hover {
-      span {
+      span,
+      .el-icon {
         color: #fff;
       }
     }
   }
 
   // 下拉菜单
+
   .el-sub-menu {
     &.is-active {
       > :deep(.el-sub-menu__title) {

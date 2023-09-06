@@ -4,7 +4,6 @@ import App from './App.vue'
 import { setupRouter } from '@/router'
 import { setupStore } from '@/store/index'
 import { useElementComponents } from '@/plugins/element-plus'
-
 /** 创建vue实例对象 */
 const app = createApp(App)
 

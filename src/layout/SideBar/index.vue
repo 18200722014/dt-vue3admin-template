@@ -17,9 +17,9 @@
 
 <script setup lang="ts">
 /** 引入Logo.vue */
-import Logo from './Logo.vue'
+import Logo from './components/Logo.vue'
 /** 引入SideBarItem.vue */
-import SideBarItem from './SideBarItem.vue'
+import SideBarItem from './components/SideBarItem.vue'
 defineOptions({
   name: 'SideBar'
 })
