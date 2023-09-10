@@ -8,7 +8,7 @@
       background-color="#001428"
       text-color="#BBB"
       active-text-color="#fff"
-      class="el-menu-vertical-demo"
+      :collapse="isCollapse"
     >
       <SideBarItem />
     </el-menu>
@@ -20,9 +20,19 @@
 import Logo from './components/Logo.vue'
 /** 引入SideBarItem.vue */
 import SideBarItem from './components/SideBarItem.vue'
+/** 引入 useLayoutStore */
+import { useLayoutStore } from '@/store/modules/layout'
+/** 引入storeToRef()函数，从store中解构属性保持响应性 */
+import { storeToRefs } from 'pinia'
 defineOptions({
   name: 'SideBar'
 })
+
+/** 创建useLayoutStore */
+const layoutStore = useLayoutStore()
+
+/** 获取layoutStore中的属性 */
+const { isCollapse } = storeToRefs(layoutStore)
 </script>
 
 <style lang="scss" scoped>

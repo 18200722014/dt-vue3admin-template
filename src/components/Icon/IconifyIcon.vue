@@ -1,5 +1,7 @@
 <template>
-  <IconifyIcon :icon="iconName" :style="{ ...attr }" />
+  <i style="display: flex">
+    <IconifyIcon :icon="iconName" :style="{ ...attr }" />
+  </i>
 </template>
 
 <script setup lang="ts">

@@ -6,9 +6,13 @@ import {
   ElIcon,
   ElMain,
   ElMenu,
+  ElSwitch,
   ElAvatar,
   ElMenuItem,
   ElSubMenu,
+  ElDropdown,
+  ElDropdownMenu,
+  ElDropdownItem,
   ElBreadcrumb,
   ElBreadcrumbItem
 } from 'element-plus'
@@ -23,9 +27,13 @@ const ElementPlusComponents: Component[] = [
   ElIcon,
   ElMain,
   ElMenu,
+  ElSwitch,
   ElAvatar,
   ElMenuItem,
   ElSubMenu,
+  ElDropdown,
+  ElDropdownMenu,
+  ElDropdownItem,
   ElBreadcrumb,
   ElBreadcrumbItem
 ]
