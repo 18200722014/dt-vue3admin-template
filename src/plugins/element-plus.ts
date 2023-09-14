@@ -44,7 +44,6 @@ const ElementPlusComponents: Component[] = [
  */
 export function useElementComponents(app: App): void {
   ElementPlusComponents.forEach((component) => {
-    console.log(component)
     app.component(component.name as string, component)
   })
 }

@@ -3,4 +3,6 @@
 .prettier.cjs
 .lintstagedrc.cjs
 .stylelintrc.cjs
+tailwind.config.js
+postcss.config.js
 commitlint.config.cjs

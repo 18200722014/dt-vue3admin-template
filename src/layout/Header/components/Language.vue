@@ -1,7 +1,7 @@
 <template>
   <!-- 中英文切换 -->
   <el-dropdown trigger="click">
-    <span class="el-dropdown-link"> 中文 </span>
+    <span class="el-dropdown-link">中文</span>
     <template #dropdown>
       <el-dropdown-menu>
         <el-dropdown-item>中文</el-dropdown-item>

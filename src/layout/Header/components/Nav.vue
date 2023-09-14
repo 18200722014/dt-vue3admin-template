@@ -1,5 +1,5 @@
 <template>
-  <div class="nav">
+  <div class="nav dark:bg-slate-900 dark:text-white">
     <!-- 左侧区域 -->
     <div class="nav-left">
       <!-- 折叠图标 -->
@@ -14,17 +14,11 @@
     <ul class="nav-right">
       <!-- 搜索图标 -->
       <li class="nav-right__item">
-        <iconify-icon icon-name="fe:search"></iconify-icon>
+        <Search />
       </li>
       <!-- 暗黑模式切换开关 -->
       <li class="nav-right__item">
-        <el-switch
-          v-model="darkMode"
-          style="--el-switch-on-color: #0960bd; --el-switch-off-color: #f60"
-          inline-prompt
-          :active-icon="Moon"
-          :inactive-icon="Sunny"
-        />
+        <DarkMode />
       </li>
       <!-- 中英文切换 -->
       <li class="nav-right__item">
@@ -32,49 +26,37 @@
       </li>
       <!-- 消息通知 -->
       <li class="nav-right__item">
-        <iconify-icon icon-name="ant-design:bell-outlined"></iconify-icon>
+        <Message />
       </li>
       <!-- 全屏 -->
       <li class="nav-right__item">
-        <iconify-icon icon-name="icon-park:full-screen"></iconify-icon>
+        <FullScreen />
       </li>
       <!-- 用户头像和信息 -->
       <li class="nav-right__item nav-right__user">
-        <!-- 用户头像 -->
-        <el-avatar :size="35" :src="getImageUrl('logo.png')" />
-        <!-- 用户信息 -->
-        <el-dropdown trigger="click">
-          <span class="el-dropdown-link">
-            admin
-            <el-icon class="el-icon--right">
-              <iconify-icon icon-name="formkit:down"></iconify-icon>
-            </el-icon>
-          </span>
-          <template #dropdown>
-            <el-dropdown-menu>
-              <el-dropdown-item>仓库地址</el-dropdown-item>
-              <el-dropdown-item>个人中心</el-dropdown-item>
-              <el-dropdown-item divided>退出登录</el-dropdown-item>
-            </el-dropdown-menu>
-          </template>
-        </el-dropdown>
+        <UserAvatar />
       </li>
     </ul>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
 /** 引入面包屑组件 */
 import Breadcrumb from './Breadcrumb.vue'
+/** 引入全局搜索组件 */
+import Search from './Search.vue'
+/** 引入暗黑模式开关 */
+import DarkMode from './DarkMode.vue'
 /** 引入中英文切换组件 */
 import Language from './Language.vue'
+/** 引入消息组件 */
+import Message from './Message.vue'
+/** 引入全屏组件 */
+import FullScreen from './FullScreen.vue'
+/** 引入用户头像组件 */
+import UserAvatar from './UserAvatar.vue'
 /** 引入iconify-icon */
 import IconifyIcon from '@/components/Icon/IconifyIcon.vue'
-/** 引入Element-Plus图标 */
-import { Sunny, Moon } from '@element-plus/icons-vue'
-/** 引入图片工具函数 */
-import { getImageUrl } from '@/utils/index'
 /** 引入 useLayoutStore */
 import { useLayoutStore } from '@/store/modules/layout'
 /** 引入storeToRef()函数，从store中解构属性保持响应性 */
@@ -92,14 +74,9 @@ const { changeIsCpllapse } = layoutStore
 
 /** 获取layoutstore中的属性 */
 const { isCollapse } = storeToRefs(layoutStore)
-
-/** 是否切换暗黑模式 */
-const darkMode = ref(false)
 </script>
 
 <style lang="scss" scoped>
-$font-size-balck: #303133;
-
 .nav {
   display: flex;
   justify-content: space-between;
@@ -130,25 +107,6 @@ $font-size-balck: #303133;
       display: flex;
       margin-right: 15px;
       cursor: pointer;
-
-      &.nav-right__user {
-        display: flex;
-        align-items: center;
-
-        i {
-          font-size: 14px;
-        }
-      }
-
-      .el-dropdown {
-        color: $font-size-balck;
-
-        .el-dropdown-link {
-          display: flex;
-          align-items: center;
-          margin-left: 5px;
-        }
-      }
     }
   }
 }

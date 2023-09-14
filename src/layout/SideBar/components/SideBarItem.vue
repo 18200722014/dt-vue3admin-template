@@ -8,14 +8,6 @@
       <el-icon><Menu /></el-icon>
       <span>Navigator Two</span>
     </el-menu-item>
-    <!-- <el-sub-menu index="1-3">
-        <template #title>
-          <span>item four</span>
-        </template>
-        <el-menu-item index="1-3-1">
-          <span>item one</span>
-        </el-menu-item>
-      </el-sub-menu> -->
   </el-sub-menu>
   <el-menu-item index="3">
     <el-icon><Menu /></el-icon>

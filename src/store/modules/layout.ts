@@ -9,7 +9,6 @@ export const useLayoutStore = defineStore('layout', () => {
   /** 切换isCollapse的状态 */
   const changeIsCpllapse = (): void => {
     isCollapse.value = !isCollapse.value
-    console.log(isCollapse.value)
   }
 
   return { isCollapse, changeIsCpllapse }
