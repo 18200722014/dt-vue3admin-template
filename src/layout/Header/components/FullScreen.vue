@@ -1,5 +1,5 @@
 <template>
-  <iconify-icon icon-name="icon-park:full-screen"></iconify-icon>
+  <iconify-icon icon-name="bx:fullscreen" class="dark:text-white"></iconify-icon>
 </template>
 
 <script setup lang="ts">

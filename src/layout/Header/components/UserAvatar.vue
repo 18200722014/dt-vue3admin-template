@@ -41,8 +41,6 @@ defineOptions({
 }
 
 .el-dropdown {
-  color: $font-size-black;
-
   .el-dropdown-link {
     display: flex;
     align-items: center;

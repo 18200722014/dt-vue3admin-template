@@ -9,7 +9,8 @@
     "preview": "vite preview",
     "lint": "eslint ./src/**/*.{ts,tsx,js,jsx,vue} --fix",
     "lint:style": "stylelint \"./**/*.{css,scss,vue,html}\" --fix",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "commit": "git add -A && cz"
   },
   "config": {
     "commitizen": {
@@ -25,7 +26,9 @@
     "element-plus": "^2.3.12",
     "normalize.css": "^8.0.1",
     "pinia": "^2.1.6",
+    "pinia-plugin-persistedstate": "^3.2.0",
     "vue": "^3.3.4",
+    "vue-i18n": "9",
     "vue-router": "4"
   },
   "devDependencies": {

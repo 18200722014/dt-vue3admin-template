@@ -1,5 +1,5 @@
 <template>
-  <div class="nav dark:bg-slate-900 dark:text-white">
+  <div class="nav dark:bg-black/75 dark:text-white">
     <!-- 左侧区域 -->
     <div class="nav-left">
       <!-- 折叠图标 -->
@@ -51,8 +51,10 @@ import DarkMode from './DarkMode.vue'
 import Language from './Language.vue'
 /** 引入消息组件 */
 import Message from './Message.vue'
+
 /** 引入全屏组件 */
 import FullScreen from './FullScreen.vue'
+
 /** 引入用户头像组件 */
 import UserAvatar from './UserAvatar.vue'
 /** 引入iconify-icon */
@@ -83,7 +85,7 @@ const { isCollapse } = storeToRefs(layoutStore)
   align-items: center;
   padding: 0 10px;
   height: 50px;
-  border-bottom: 1px solid $border-color;
+  box-shadow: 0 4px 4px -4px rgb(0, 0, 0, 0.5);
 
   i {
     font-size: 18px;

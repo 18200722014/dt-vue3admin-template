@@ -9,7 +9,7 @@
           <Header />
         </el-header>
         <el-main>
-          <span class="text-3xl font-bold underline dark:text-white"> Main </span>
+          <span class="text-3xl font-bold underline dark:text-white"> {{ $t('common.home') }} </span>
         </el-main>
       </el-container>
     </el-container>
@@ -21,6 +21,7 @@
 import Header from './Header/index.vue'
 /** 引入SideBar.vue */
 import SideBar from './SideBar/index.vue'
+
 /** 引入useLayoutStore */
 import { useLayoutStore } from '@/store/modules/layout'
 /** storeToRefs()，从store中解构属性保持响应性 */
@@ -40,7 +41,6 @@ const { isCollapse } = storeToRefs(layoutStore)
 <style lang="scss" scoped>
 .layout {
   .el-aside {
-    border-right: solid 1px $border-color;
     background-color: $sidebar-bg-color;
     transition: width 0.3s;
   }

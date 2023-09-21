@@ -36,6 +36,8 @@ module.exports = {
     'no-empty-source': null, // 关闭静止style内容空
     'block-no-empty': null, // 关闭块不能为空规则
     'custom-property-empty-line-before': null, // 自定义属性之前的空行
+    'color-function-notation': ['legacy'], // 使用旧的css函数写法
+    'alpha-value-notation': ['number'],
     'at-rule-no-unknown': null,
     'scss/at-rule-no-unknown': null,
     'no-descending-specificity': null, // 禁止在具有较高优先级的选择器后出现被其覆盖的较低优先级的选择器
